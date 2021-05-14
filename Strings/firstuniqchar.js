@@ -9,10 +9,13 @@ const firstUniqChar = function (s) {
     }
   }
   for (let key in output) {
-    if (output[key] === "HIT") return s.indexOf(key);
+    if (output[key] === "HIT") {
+    return s.indexOf(key);
+    }
   }
-  return -(-1);
+  return -1;
 };
 
 console.log(firstUniqChar("mcdermott")); // 1
 console.log(firstUniqChar("newzealand")); // 2
+console.log(firstUniqChar("toot")) //-1
